@@ -1,15 +1,15 @@
 from functools import reduce
 from typing import List
 
-from polygonscan.enums.actions_enum import ActionsEnum as actions
-from polygonscan.enums.fields_enum import FieldsEnum as fields
-from polygonscan.enums.modules_enum import ModulesEnum as modules
-from polygonscan.enums.tags_enum import TagsEnum as tags
+from ftmscan.enums.actions_enum import ActionsEnum as actions
+from ftmscan.enums.fields_enum import FieldsEnum as fields
+from ftmscan.enums.modules_enum import ModulesEnum as modules
+from ftmscan.enums.tags_enum import TagsEnum as tags
 
 
 class Accounts:
     @staticmethod
-    def get_matic_balance(address: str) -> str:
+    def get_ftm_balance(address: str) -> str:
         url = (
             f"{fields.MODULE}"
             f"{modules.ACCOUNT}"
@@ -23,7 +23,7 @@ class Accounts:
         return url
 
     @staticmethod
-    def get_matic_balance_multiple(addresses: List[str]) -> str:
+    def get_ftm_balance_multiple(addresses: List[str]) -> str:
         # NOTE: Max 20 wallets at a time
         address_list = reduce(lambda w1, w2: str(w1) + "," + str(w2), addresses)
         url = (

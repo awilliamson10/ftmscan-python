@@ -2,8 +2,8 @@
   "method": "get_total_supply_by_contract_address",
   "module": "tokens",
   "kwargs": {
-    "contract_address": "0x57d90b64a1a57749b0f932f1a3395792e12e7055"
+    "contract_address": "0x2FBFf41a9efAEAE77538bd63f1ea489494acdc08"
   },
-  "log_timestamp": "2021-09-20-02:15:30",
-  "res": "0"
+  "log_timestamp": "2022-01-11-17:23:50",
+  "res": "114558897386498794061239308"
 }

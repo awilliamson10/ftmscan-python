@@ -1,45 +1,44 @@
-# polygonscan-python
+# ftmscan-python
 
 <p align="center">
-  <a href="https://github.com/tarsil/polygonscan-python" alt="build">
-        <img src="https://github.com/tarsil/polygonscan-python/workflows/build/badge.svg" /></a>
+  <a href="https://github.com/tarsil/ftmscan-python" alt="build">
+        <img src="https://github.com/tarsil/ftmscan-python/workflows/build/badge.svg" /></a>
 </p>
 
 <p align="center">
-  <a href="https://badge.fury.io/py/polygonscan-python" alt="pypi">
-        <img src="https://badge.fury.io/py/polygonscan-python.svg" /></a>
+  <a href="https://badge.fury.io/py/ftmscan-python" alt="pypi">
+        <img src="https://badge.fury.io/py/ftmscan-python.svg" /></a>
   
   <a href="" alt="license">
-        <img src="https://img.shields.io/github/license/tarsil/polygonscan-python" /></a>
+        <img src="https://img.shields.io/github/license/awilliamson10/ftmscan-python" /></a>
   
   <a href="https://www.python.org/downloads/release/python-385/" alt="python-version">
         <img src="https://img.shields.io/badge/python-3.8-blue.svg" /></a>
 </p>
 
 <p align="center">
-  A complete Python API for <a href="https://polygonscan.com/">PolygonScan.com</a>
+  A complete Python API for <a href="https://ftmscan.com/">FTMscan.com</a>
 </p>
 
 <p align="center">
-  Powered by <a href="https://polygonscan.com/apis">PolygonScan.com APIs</a>
+  Powered by <a href="https://ftmscan.com/apis">FTMscan.com APIs</a>
 </p>
 
 <p align="center">
-  Available on <a href="https://pypi.org/project/polygonscan-python/">PyPI</a> 
+  Available on <a href="https://pypi.org/project/ftmscan-python/">PyPI</a> 
 </p>
 
 
 <p align="center">
-  <i>A fork of the <a href="https://github.com/pcko1/bscscan-python">bscscan-python</a> package.</i>
+  <i>A fork of the <a href="https://github.com/tarsil/polygonscan-python">polygonscan-python</a> package.</i>
 </p>
 
-A minimal, yet complete, Python API for [polygonscan.com](https://polygonscan.com/).
+A minimal, yet complete, Python API for [ftmscan.com](https://ftmscan.com/).
 
-This package was cloned from [bscscan-python](https://github.com/pcko1/bscscan-python) and
-readapted to polygon network. A special thanks to the [creator](https://github.com/pcko1).
+This package was cloned from [polygonscan-python](https://github.com/tarsil/polygonscan-python) and readapted to ftm network. A special thanks to the [creator](https://github.com/tarsil).
 Without his hardwork this would be possible.
 
-Available on [PyPI](https://pypi.org/project/polygonscan-python/). Powered by [polygonscan.com APIs](https://polygonscan.com/apis#misc).
+Available on [PyPI](https://pypi.org/project/ftmscan-python/). Powered by [ftmscan.com APIs](https://ftmscan.com/apis#misc).
 
 ___
 
@@ -47,11 +46,11 @@ ___
 
 The following endpoints are provided:
 
-<details><summary>Accounts <a href="https://polygonscan.com/apis#accounts">(source)</a></summary>
+<details><summary>Accounts <a href="https://ftmscan.com/apis#accounts">(source)</a></summary>
 <p>
 
-* `get_matic_balance`
-* `get_matic_balance_multiple`
+* `get_ftm_balance`
+* `get_ftm_balance_multiple`
 * `get_normal_txs_by_address`
 * `get_normal_txs_by_address_paginated`
 * `get_internal_txs_by_address`
@@ -69,7 +68,7 @@ The following endpoints are provided:
 
 </details>
 
-<details><summary>Contracts <a href="https://polygonscan.com/apis#contracts">(source)</a></summary>
+<details><summary>Contracts <a href="https://ftmscan.com/apis#contracts">(source)</a></summary>
 <p>
   
 * `get_contract_abi`
@@ -79,43 +78,7 @@ The following endpoints are provided:
 
 </details>
 
-<details><summary>Transactions <a href="https://polygonscan.com/apis#transactions">(source)</a></summary>
-<p>
-  
-* `get_contract_execution_status`
-* `get_tx_receipt_status`
-
-</details>
-
-<details><summary>Blocks <a href="https://polygonscan.com/apis#blocks">(source)</a></summary>
-<p>
-  
-* `get_block_reward_by_block_number`
-* `get_est_block_countdown_time_by_block_number`
-* `get_block_number_by_timestamp`
-
-</details>
-
-<details><summary>GETH/Parity Proxy <a href="https://polygonscan.com/apis#proxy">(source)</a></summary>
-<p>
-
-* `get_proxy_block_number`
-* `get_proxy_block_by_number`
-* `get_proxy_uncle_by_block_number_and_index`
-* `get_proxy_block_transaction_count_by_number`
-* `get_proxy_transaction_by_hash`
-* `get_proxy_transaction_by_block_number_and_index`
-* `get_proxy_transaction_count`
-* `get_proxy_transaction_receipt`
-* `get_proxy_call`
-* `get_proxy_code_at`
-* `get_proxy_storage_position_at`
-* `get_proxy_gas_price`
-* `get_proxy_est_gas`
-
-</details>
-
-<details><summary>Tokens <a href="https://polygonscan.com/apis#tokens">(source)</a></summary>
+<details><summary>Tokens <a href="https://ftmscan.com/apis#tokens">(source)</a></summary>
 <p>
   
 * `get_total_supply_by_contract_address`
@@ -123,42 +86,34 @@ The following endpoints are provided:
 
 </details>
 
-<details><summary>Gas Tracker <a href="https://polygonscan.com/apis#gastracker">(source)</a></summary>
+<details><summary>Stats <a href="https://ftmscan.com/apis#stats">(source)</a></summary>
 <p>
   
-* `get_est_confirmation_time`
-* `get_gas_oracle`
+* `get_total_ftm_supply`
+* `get_ftm_last_price`
 
 </details>
 
-<details><summary>Stats <a href="https://polygonscan.com/apis#stats">(source)</a></summary>
-<p>
-  
-* `get_total_matic_supply`
-* `get_matic_last_price`
-
-</details>
-
-*If you think that a newly-added method is missing, kindly open an [issue](https://github.com/tarsil/polygonscan-python/issues) as a feature request and I will do my best to add it.*
+*If you think that a newly-added method is missing, kindly open an [issue](https://github.com/awilliamson10/ftmscan-python/issues) as a feature request and I will do my best to add it.*
 
 ## Installation
 
-Before proceeding, you should register an account on [polygonscan.com](https://polygonscan.com/)
-and [generate a personal API key](https://polygonscan.com/myapikey) to use.
+Before proceeding, you should register an account on [ftmscan.com](https://ftmscan.com/)
+and [generate a personal API key](https://ftmscan.com/myapikey) to use.
 
-If you wish to have access to the PRO endpoints, you should obtain elevated privileges via PolygonScans's
+If you wish to have access to the PRO endpoints, you should obtain elevated privileges via ftmScans's
 subscription service.
 
 Install from source:
 
 ``` bash
-pip install git+https://github.com/tarsil/polygonscan-python
+pip install git+https://github.com/awilliamson10/ftmscan-python
 ```
 
-Alternatively, install from [PyPI](https://pypi.org/project/polygonscan-python/):
+Alternatively, install from [PyPI](https://pypi.org/project/ftmscan-python/):
 
 ```bash
-pip install polygonscan-python
+pip install ftmscan-python
 ```
 
 ## Unit tests
@@ -174,32 +129,28 @@ This will regenerate the logs under `logs/` with the most recent results and the
 
 ## Usage
 
-In `python`, create a client with your personal [polygonscan.com](https://polygonscan.com/) API key:
+In `python`, create a client with your personal [ftmscan.com](https://ftmscan.com/) API key:
 
 E.g:
 ``` python
-from polygonscan import PolygonScan
+from ftmscan import ftmScan
 
-with PolygonScan("API_KEY",False) as matic:
-    print(matic.get_matic_balance(address="0xddbd2b932c763ba5b1b7ae3b362eac3e8d40121a"))
+with ftmScan("API_KEY",False) as ftm:
+    print(ftm.get_ftm_balance(address="0xddbd2b932c763ba5b1b7ae3b362eac3e8d40121a"))
 ```
 
 Then you can call all available methods, e.g.:
 
 ``` python
-matic.get_matic_balance(address="0xddbd2b932c763ba5b1b7ae3b362eac3e8d40121a")
+ftm.get_ftm_balance(address="0xddbd2b932c763ba5b1b7ae3b362eac3e8d40121a")
 
 > '40891631566070000000000'
-```
-You can also choose one of the other testnets:
-``` python
-matic = PolygonScan(YOUR_API_KEY, net="ropsten") # net name is case-insensitive, default is main
 ```
 
 ## Examples
 
 Examples (arguments and results) for all methods may be found as JSON files
-[here](https://github.com/tarsil/polygonscan-python/tree/master/logs).
+[here](https://github.com/tarsil/ftmscan-python/tree/master/logs).
 For example, if you want to use the method `get_block_number_by_timestamp`,
 you can find the supported arguments and the format of its output in its respective 
 [JSON file](logs/standard/get_block_number_by_timestamp.json):
@@ -226,18 +177,18 @@ eth.get_block_number_by_timestamp(timestamp="1578638524", closest="before")
 ```
 
 **Disclaimer**: Those examples blindly use the arguments originally showcased
-[here](https://api.polygonscan.com/apis) and the selected wallets/contracts
+[here](https://api.ftmscan.com/apis) and the selected wallets/contracts
 do not reflect any personal preference. You should refer to the same source for additional
 information regarding specific argument values.
 
 ## Issues
 
 For problems regarding installing or using the package please open an
-[issue](https://github.com/tarsil/polygonscan-python/issues).
+[issue](https://github.com/tarsil/ftmscan-python/issues).
 Kindly avoid disclosing potentially sensitive information such as your API keys or your wallet addresses.
 
 Feel free to leave a :star: if you found this package useful.
 
 ___
 
- Powered by [polygonscan.com APIs](https://polygonscan.com/apis).
+ Powered by [ftmscan.com APIs](https://ftmscan.com/apis).

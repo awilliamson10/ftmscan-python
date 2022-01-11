@@ -1,7 +1,7 @@
-import polygonscan
-from polygonscan.core.base import BaseClient
-from polygonscan.enums.fields_enum import FieldsEnum as fields
-from polygonscan.utils.parsing import ResponseParser as parser
+import ftmscan
+from ftmscan.core.base import BaseClient
+from ftmscan.enums.fields_enum import FieldsEnum as fields
+from ftmscan.utils.parsing import ResponseParser as parser
 from requests import Session
 
 
@@ -9,7 +9,10 @@ class SyncClient(BaseClient):
     def _build(self):
         for func, v in self._config.items():
             if not func.startswith("_"):  # disabled if _
-                attr = getattr(getattr(polygonscan, v["module"]), func)
+                if v["module"] in ['blocks', 'logs', 'proxy', 'transactions']:
+                    print("Method not available on ftmscan.")
+                    break
+                attr = getattr(getattr(ftmscan, v["module"]), func)
                 setattr(self, func, self._exec(attr))
         return self
 

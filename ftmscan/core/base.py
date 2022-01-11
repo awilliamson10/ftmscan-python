@@ -1,7 +1,7 @@
 import json
 from importlib import resources
 
-from polygonscan import configs
+from ftmscan import configs
 
 CONFIG_FILE = "stable.json"
 

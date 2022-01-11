@@ -1,6 +1,6 @@
-from polygonscan.enums.actions_enum import ActionsEnum as actions
-from polygonscan.enums.fields_enum import FieldsEnum as fields
-from polygonscan.enums.modules_enum import ModulesEnum as modules
+from ftmscan.enums.actions_enum import ActionsEnum as actions
+from ftmscan.enums.fields_enum import FieldsEnum as fields
+from ftmscan.enums.modules_enum import ModulesEnum as modules
 
 
 class Logs:
@@ -41,8 +41,8 @@ class Logs:
         Returns:
             dict: The event logs in a dictionary, including topics and data fields.
         Example::
-            from polygonscan import PolygonScan
-            async with PolygonScan(YOUR_API_KEY) as client:
+            from ftmscan import ftmScan
+            async with ftmScan(YOUR_API_KEY) as client:
                 print(
                     await client.get_logs(
                         from_block=4993830,

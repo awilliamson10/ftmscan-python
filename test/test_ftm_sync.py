@@ -4,9 +4,9 @@ import time
 from datetime import datetime
 from unittest import TestCase
 
-from polygonscan import PolygonScan
+from ftmscan import ftmScan
 
-CONFIG_PATH = "polygonscan/configs/stable.json"
+CONFIG_PATH = "ftmscan/configs/stable.json"
 API_KEY = os.environ["API_KEY"]
 
 
@@ -26,11 +26,11 @@ class Case(TestCase):
     def test_methods(self):
         print(f"\nMODULE: {self._MODULE}")
         config = load(CONFIG_PATH)
-        with PolygonScan(api_key=API_KEY, asynchronous=False, debug=True) as polygon:
+        with ftmScan(api_key=API_KEY, asynchronous=False, debug=True) as ftm:
             for fun, v in config.items():
                 if not fun.startswith("_"):  # disabled if _
                     if v["module"] == self._MODULE:
-                        res = getattr(polygon, fun)(**v["kwargs"])
+                        res = getattr(ftm, fun)(**v["kwargs"])
                         print(f"ASYNC: False, METHOD: {fun}, RTYPE: {type(res)}")
                         fname = f"logs/standard/{fun}.json"
                         log = {

@@ -23,7 +23,7 @@ class FieldsEnum:
     OFFSET: str = "&offset="
     PAGE: str = "&page="
     POSITION: str = "&position="
-    PREFIX: str = "https://api.polygonscan.com/api?"
+    PREFIX: str = "https://api.ftmscan.com/api?"
     SORT: str = "&sort="
     START_BLOCK: str = "&startblock="
     START_DATE: str = "&startdate="

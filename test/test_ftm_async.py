@@ -4,9 +4,9 @@ import os
 from datetime import datetime
 from unittest import IsolatedAsyncioTestCase
 
-from polygonscan import PolygonScan
+from ftmscan import ftmScan
 
-CONFIG_PATH = "polygonscan/configs/stable.json"
+CONFIG_PATH = "ftmscan/configs/stable.json"
 API_KEY = os.environ["API_KEY"]
 
 
@@ -26,11 +26,11 @@ class Case(IsolatedAsyncioTestCase):
     async def test_methods(self):
         print(f"\nMODULE: {self._MODULE}")
         config = load(CONFIG_PATH)
-        async with PolygonScan(api_key=API_KEY, asynchronous=True, debug=True) as polygon:
+        async with ftmScan(api_key=API_KEY, asynchronous=True, debug=True) as ftm:
             for fun, v in config.items():
                 if not fun.startswith("_"):  # disabled if _
                     if v["module"] == self._MODULE:
-                        res = await getattr(polygon, fun)(**v["kwargs"])
+                        res = await getattr(ftm, fun)(**v["kwargs"])
                         print(f"ASYNC: True, METHOD: {fun}, RTYPE: {type(res)}")
                         fname = f"logs/standard/{fun}.json"
                         log = {

@@ -1,6 +1,6 @@
-from polygonscan.enums.actions_enum import ActionsEnum as actions
-from polygonscan.enums.fields_enum import FieldsEnum as fields
-from polygonscan.enums.modules_enum import ModulesEnum as modules
+from ftmscan.enums.actions_enum import ActionsEnum as actions
+from ftmscan.enums.fields_enum import FieldsEnum as fields
+from ftmscan.enums.modules_enum import ModulesEnum as modules
 
 
 class Transactions:
